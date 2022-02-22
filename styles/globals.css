@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500&family=Poppins:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-mulish;
+  }
+
+  h1,
+  h2 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .header {
+    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12 shadow-sm border-b text-white;
+  }
+
+  .header-link {
+    @apply flex items-center space-x-1 cursor-pointer mt-3;
+  }
+}

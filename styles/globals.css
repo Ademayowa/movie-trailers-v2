@@ -17,10 +17,16 @@
 
 @layer components {
   .header {
-    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12 shadow-sm border-b text-white;
+    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12 shadow-sm text-white;
   }
 
   .header-link {
-    @apply flex items-center space-x-1 cursor-pointer mt-3;
+    @apply flex items-center space-x-1 cursor-pointer font-medium;
+  }
+
+  .hero {
+    width: 100%;
+    background: url('/images/hero.jpg') no-repeat center center;
+    background-size: cover;
   }
 }

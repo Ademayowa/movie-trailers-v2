@@ -3,7 +3,9 @@ import Layout from '@/components/Layout';
 import Movies from '@/components/Movies';
 import { BASE_URL } from '@/config/index';
 
-export default function HomePage({ popularMovies }) {
+export default function HomePage({ popularMovies, topRatedShows }) {
+  console.log(topRatedShows);
+
   return (
     <Layout title='Movie Trailers | Home'>
       <Hero />

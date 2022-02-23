@@ -9,8 +9,6 @@ export default function HomePage({
   popularShows,
   topRatedShows,
 }) {
-  console.log(topRatedShows);
-
   return (
     <Layout title='Movie Trailers | Home'>
       <Hero />

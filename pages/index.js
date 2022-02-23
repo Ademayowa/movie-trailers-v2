@@ -1,15 +1,21 @@
 import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import Movies from '@/components/Movies';
+import Shows from '@/components/Shows';
 import { BASE_URL } from '@/config/index';
 
-export default function HomePage({ popularMovies, topRatedShows }) {
+export default function HomePage({
+  popularMovies,
+  popularShows,
+  topRatedShows,
+}) {
   console.log(topRatedShows);
 
   return (
     <Layout title='Movie Trailers | Home'>
       <Hero />
       <Movies movies={popularMovies} title="What's Popular" />
+      <Shows movies={popularShows} title='Latest Trailers' />
     </Layout>
   );
 }

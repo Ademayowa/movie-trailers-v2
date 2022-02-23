@@ -29,4 +29,10 @@
     background: url('/images/hero.jpg') no-repeat center center;
     background-size: cover;
   }
+
+  .movies-bg {
+    width: 100%;
+    background: url('/images/bg.svg') no-repeat center center;
+    background-size: cover;
+  }
 }

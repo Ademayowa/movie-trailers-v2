@@ -74,8 +74,6 @@ export async function getServerSideProps(context) {
   );
   const movie = await res.json();
 
-  console.log(movie);
-
   return {
     props: { movie },
   };

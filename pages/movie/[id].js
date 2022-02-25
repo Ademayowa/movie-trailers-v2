@@ -54,8 +54,12 @@ export default function Movie({ movie }) {
             </div>
           </div>
 
-          <h4></h4>
-          <h5 className='text-white font-bold text-2xl'>Overview</h5>
+          <h4 className='text-white md:text-lg'>
+            {movie.release_date} •{' '}
+            {movie.genres.map((genre) => genre.name + ', ')} •{' '}
+            {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
+          </h4>
+          {/* <h5 className='text-white font-bold text-2xl'>Overview</h5> */}
           <p className='text-white max-w-4xl text-base md:text-[20px]'>
             {movie.overview}
           </p>

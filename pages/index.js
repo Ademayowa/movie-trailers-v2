@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Layout from '@/components/Layout';
 import Movies from '@/components/Movies';
@@ -13,7 +14,9 @@ export default function HomePage({
     <Layout title='Movie Trailers | Home'>
       <Hero />
       <Movies movies={popularMovies} title="What's Popular" />
-      <Shows movies={popularShows} title='Latest Trailers' />
+      {/* <Shows movies={popularShows} title='Latest Trailers' /> */}
+      <Shows movies={topRatedShows} title='Top Rated Shows' />
+      <Footer />
     </Layout>
   );
 }

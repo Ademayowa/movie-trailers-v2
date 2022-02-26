@@ -11,16 +11,15 @@ export default function Header() {
         <span>Movie Trailers</span>
       </a>
 
-      <div className='ml-auto flex items-center space-x-4'>
-        <a className='header-link group' onClick={() => router.push('/')}>
-          <span>Movies</span>
-        </a>
-        <a className='header-link group'>
-          <span>Tv Shows</span>
-        </a>
-        <a className='header-link group'>
-          <span>People</span>
-        </a>
+      <div className='ml-auto flex items-center space-x-4 hidden md:block'>
+        <ul className='header-link group space-x-6'>
+          <li>
+            <a href='#top'>Movies</a>
+          </li>
+          <li>
+            <a href='#top'>Tv Shows</a>
+          </li>
+        </ul>
       </div>
     </header>
   );

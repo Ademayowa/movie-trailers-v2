@@ -38,6 +38,6 @@
 
   /* Single movie page */
   .movie-icons {
-    @apply rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725] text-white;
+    @apply rounded-full flex items-center justify-center w-11 h-11 cursor-pointer bg-[#091725] hover:bg-[#10283f] text-white;
   }
 }

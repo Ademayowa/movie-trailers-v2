@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-4`}>
+    <a href={to} className={`mx-2`}>
       {children}
     </a>
   );
@@ -19,20 +19,7 @@ function MobileNav({ open, setOpen }) {
         open ? '-translate-x-0' : '-translate-x-full px-4'
       } transition-transform duration-300 ease-in-out filter drop-shadow-md`}
     >
-      <div className='header'>
-        {/* <a
-          className='flex items-center cursor-pointer'
-          onClick={() => router.push('/')}
-        >
-          <Image
-            src={`/images/logo.png`}
-            width={150}
-            height={150}
-            objectFit='contain'
-          />
-        </a> */}
-      </div>
-
+      <div className='header' />
       <div className='flex flex-col px-10'>
         <a
           className='text-xl font-medium my-3'

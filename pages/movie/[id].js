@@ -64,12 +64,12 @@ export default function Movie({ movie }) {
             </div>
           </div>
 
-          <h4 className='text-xs md:text-sm text-white'>
+          <h4 className='text-white'>
             {movie.release_date} •{' '}
             {movie.genres.map((genre) => genre.name + ', ')}{' '}
             {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
           </h4>
-          <p className='md:text-lg max-w-2xl text-white'>
+          <p className='text-lg max-w-2xl text-white'>
             {movie.overview.length > 180
               ? movie.overview.substring(0, 290) + '...'
               : movie.overview}

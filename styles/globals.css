@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-mulish;
+    @apply font-mulish bg-[#040714];
   }
 
   h1,

@@ -21,7 +21,7 @@ export default function Show({ movie }) {
 
   return (
     <Layout title={movie.title || movie.original_name}>
-      <section className='relative z-50'>
+      <section className='relative z-50 pb-20'>
         <div className='relative min-h-[calc(100vh-72px)] max-h-screen'>
           <Image
             src={
@@ -69,11 +69,7 @@ export default function Show({ movie }) {
             {movie.genres.map((genre) => genre.name + ', ')}{' '}
             {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
           </h4>
-          <p className='text-lg max-w-2xl text-white'>
-            {movie.overview.length > 180
-              ? movie.overview.substring(0, 290) + '...'
-              : movie.overview}
-          </p>
+          <p className='text-lg max-w-2xl text-white'>{movie.overview}</p>
         </div>
 
         {/* Bg Overlay */}

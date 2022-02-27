@@ -33,7 +33,7 @@ export default function Show({ movie }) {
           />
         </div>
 
-        <div className='absolute inset-y-28 md:inset-y-auto md:bottom-20 inset-x-4 md:inset-x-12 space-y-6 z-50'>
+        <div className='absolute inset-y-20 md:inset-y-40 md:bottom-10 inset-x-4 md:inset-x-12 space-y-6 z-50'>
           <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold text-white'>
             {movie.title || movie.original_name}
           </h1>
@@ -71,7 +71,7 @@ export default function Show({ movie }) {
           </h4>
           <p className='text-sm md:text-lg max-w-4xl text-white'>
             {movie.overview.length > 180
-              ? movie.overview.substring(0, 210) + '...'
+              ? movie.overview.substring(0, 290) + '...'
               : movie.overview}
           </p>
         </div>

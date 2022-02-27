@@ -69,7 +69,7 @@ export default function Movie({ movie }) {
             {movie.genres.map((genre) => genre.name + ', ')}{' '}
             {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}m
           </h4>
-          <p className='text-sm md:text-lg max-w-4xl text-white'>
+          <p className='md:text-lg max-w-2xl text-white'>
             {movie.overview.length > 180
               ? movie.overview.substring(0, 290) + '...'
               : movie.overview}

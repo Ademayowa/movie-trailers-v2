@@ -33,7 +33,7 @@
   .movies-bg {
     width: 100%;
     background: url('/images/bg.svg') no-repeat center center;
-    background-size: cover;
+    background-size: contain;
   }
 
   /* Single movie page */

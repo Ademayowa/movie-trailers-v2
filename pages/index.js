@@ -7,14 +7,16 @@ import { BASE_URL } from '@/config/index';
 
 export default function HomePage({
   popularMovies,
-  popularShows,
+  upcomingMovies,
   topRatedShows,
 }) {
+  console.log(upcomingMovies);
+
   return (
     <Layout title='Movie Trailers | Home'>
       <Hero />
       <Movies movies={popularMovies} title="What's Popular" />
-      {/* <Shows movies={popularShows} title='Latest Trailers' /> */}
+      <Movies movies={upcomingMovies} title='Upcoming Movies' />
       <Shows movies={topRatedShows} title='Top Rated Shows' />
       <Footer />
     </Layout>
@@ -22,14 +24,14 @@ export default function HomePage({
 }
 
 export async function getServerSideProps() {
-  const [popularMoviesRes, popularShowsRes, topRatedShowsRes] =
+  const [popularMoviesRes, upcomingMoviesRes, topRatedShowsRes] =
     await Promise.all([
       fetch(
         `${BASE_URL}/movie/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`
       ),
 
       fetch(
-        `${BASE_URL}/tv/popular?api_key=${process.env.API_KEY}&language=en-US&page=1`
+        `${BASE_URL}/movie/upcoming?api_key=${process.env.API_KEY}&language=en-US&page=1`
       ),
 
       fetch(
@@ -37,16 +39,16 @@ export async function getServerSideProps() {
       ),
     ]);
 
-  const [popularMovies, popularShows, topRatedShows] = await Promise.all([
+  const [popularMovies, upcomingMovies, topRatedShows] = await Promise.all([
     popularMoviesRes.json(),
-    popularShowsRes.json(),
+    upcomingMoviesRes.json(),
     topRatedShowsRes.json(),
   ]);
 
   return {
     props: {
       popularMovies: popularMovies?.results,
-      popularShows: popularShows?.results,
+      upcomingMovies: upcomingMovies?.results,
       topRatedShows: topRatedShows?.results,
     },
   };

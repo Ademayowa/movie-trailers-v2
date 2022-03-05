@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { BASE_URL } from '@/config/index';
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-2`}>
-      {children}
-    </a>
+    <Link href={to}>
+      <a className={`mx-2`}>{children}</a>
+    </Link>
   );
 }
 
@@ -21,20 +23,21 @@ function MobileNav({ open, setOpen }) {
     >
       <div className='header' />
       <div className='flex flex-col px-10'>
-        <a
-          className='text-xl font-medium my-3'
-          href='#top'
-          onClick={() => setOpen(!open)}
-        >
-          Movies
-        </a>
-        <a
+        <Link href='/upcoming'>
+          <a
+            className='text-xl font-medium my-3'
+            onClick={() => setOpen(!open)}
+          >
+            Latest Movies
+          </a>
+        </Link>
+        {/* <a
           className='text-xl font-normal my-3'
           href='#top'
           onClick={() => setOpen(!open)}
         >
           Tv Shows
-        </a>
+        </a> */}
       </div>
     </div>
   );
@@ -85,7 +88,7 @@ export default function Navbar() {
         </div>
 
         <div className='hidden md:flex'>
-          <NavLink to='/#top'>Movies</NavLink>
+          <NavLink to='/upcoming'>Latest Movies</NavLink>
           <NavLink to='/#top'>TV Shows</NavLink>
         </div>
       </div>

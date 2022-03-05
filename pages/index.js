@@ -10,8 +10,6 @@ export default function HomePage({
   upcomingMovies,
   topRatedShows,
 }) {
-  console.log(upcomingMovies);
-
   return (
     <Layout title='Movie Trailers | Home'>
       <Hero />

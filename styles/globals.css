@@ -17,7 +17,7 @@
 
 @layer components {
   .header {
-    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12 shadow-sm text-white;
+    @apply sticky bg-[#040714] top-0 z-[1000] flex h-[72px] items-center px-10 md:px-12 shadow-lg text-white border-b border-blue-300;
   }
 
   .header-link {
@@ -33,7 +33,7 @@
   .movies-bg {
     width: 100%;
     background: url('/images/bg.svg') no-repeat center center;
-    background-size: contain;
+    background-size: cover;
   }
 
   /* Single movie page */

@@ -31,7 +31,7 @@ export default function UpcomingMovies({ movies }) {
                 </div>
 
                 <div className='text-gray-600 font-bold tracking-wider'>
-                  {movie.release_date}
+                  {new Date(movie.release_date).toLocaleDateString('en-US')}
                 </div>
               </div>
             </div>

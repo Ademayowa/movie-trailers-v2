@@ -20,5 +20,5 @@ export default function Layout({ title, description, keywords, children }) {
 Layout.defaultProps = {
   title: 'Movie Trailers',
   description: 'Watch the latest movie trailers & Tv shows',
-  keywords: 'movies, trailers, tv shows, recent trailers',
+  keywords: 'movies, trailers, tv shows, recent trailers.',
 };
